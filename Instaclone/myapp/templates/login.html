@@ -1,0 +1,20 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<form method="post">
+{% csrf_token %}
+      <div><H1>LOGIN</H1>
+          <body STYLE="background-color:pink; text-align:center; color:blue; font-family: helvetica;">
+          <label for="username">Username: </label>
+          <input id="username" type="text" name="username" value={{ username }}>
+      </div>
+
+      <div>
+          <label for="password">Password: </label>
+          <input id="password" type="password" name="password" value={{ password }}>
+      </div>
+
+      <input type="submit" value="Log In">
+
+    </form>

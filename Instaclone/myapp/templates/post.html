@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body STYLE="background-color:pink; text-align:center; color:blue; font-family: helvetica;">>
+<form method="POST" action="" enctype="multipart/form-data">
+        {% csrf_token %}
+
+        {{ form.as_p }}
+        <div>
+            <label for="image">Image: </label>
+            <input id="image" type="file" name="image" accept="image/*" value={{ image }}>
+        </div>
+        <div>
+            <label for="caption">Caption: </label>
+            <input id="caption" type="text" name="image" value={{ caption }}>
+        </div>
+
+        <input type="submit" class="btn btn-default" value="Post">
+</form>
+</>
+</html>

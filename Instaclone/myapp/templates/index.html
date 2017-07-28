@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SOCIAL KIDS</title>
+</head>
+<body STYLE="background-color:pink; text-align:center; color:blue; font-family: helvetica;">
+<div class="main">
+        <h1><U><b>SOCIAL KIDS</U></h1>
+
+        <h3><B>SIGN UP</B></h3>
+    </div>
+
+    <div>
+        <form method="post">
+            {% csrf_token %}
+
+            <div>
+                <label for="username">Username: </label>
+                <input id="username" type="text" name="username" value={{ username }}>
+            </div><br>
+
+            <div>
+                <label for="name">Name: </label>
+                <input id="name" type="text" name="name" value={{ name }}>
+            </div><br>
+
+            <div>
+                <label for="email">Email: </label>
+                <input id="email" type="text" name="email" value={{ email }}>
+            </div><br>
+
+            <div>
+                <label for="password">Password: </label>
+                <input id="password" type="password" name="password" value={{ password }}>
+            </div><br>
+                <input type="submit" value="Sign Up">
+        </form>
+
+
+    </div><br><br>
+
+    <div><h3>Already a user?</h3><a href="login/">Login</a> </div>
+</body>
+</html>
